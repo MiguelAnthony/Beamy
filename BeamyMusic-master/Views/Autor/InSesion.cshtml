@@ -1,0 +1,50 @@
+﻿
+@{ Layout = null; }
+
+<html>
+<head>
+    <title>Beamy Music-Login</title>
+
+    <link rel="icon" type="image/jpg" href="~/Img/play.png" />
+    <link rel="stylesheet" type="text/css" href="~/css/style12.css" />
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css'>
+    <style>
+        strong {
+            color: rgba(255, 0, 0, 0.72);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="login-form">
+        <h1>Beamy Music</h1>
+        <form action="/Autor/InSesion" method="post">
+
+            <div class="form-group ">
+
+                <input type="text" class="form-control" required name="username" placeholder="Username " id="UserName">
+                <strong class="st">@Html.ValidationMessage("Usuario")</strong>
+                <i class="fa fa-user"></i>
+
+            </div>
+
+
+            <div class="form-group log-status">
+
+                <input type="password" class="form-control" required name="password" placeholder="Password" id="Passwod">
+                <strong class="st">@Html.ValidationMessage("Contraseña")</strong>
+                <i class="fa fa-lock"></i>
+
+            </div>
+
+
+            <a class="link" href="#">Lost your password?</a>
+            <strong class="st">@Html.ValidationMessage("InSesion")</strong>
+            <button class="log-btn">Log in</button>
+        </form>
+    </div>
+</body>
+</html>
+
+
